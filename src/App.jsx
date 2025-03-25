@@ -6,12 +6,12 @@ const Calculator = () => {
   const [operator, setOperator] = useState(null);
   const [waitingForSecondOperand, setWaitingForSecondOperand] = useState(false);
 
-  const inputDigit = (digit) => {
+  const inputDigit = (dig) => {
     if (waitingForSecondOperand) {
-      setDisplay(String(digit));
+      setDisplay(String(dig));
       setWaitingForSecondOperand(false);
     } else {
-      setDisplay(display === '0' ? String(digit) : display + digit);
+      setDisplay(display === '0' ? String(dig) : display + dig);
     }
   };
 
